@@ -1,0 +1,32 @@
+.primaryCta {
+  padding: 16px 36px;
+  background: #d72638;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.primaryCta:hover {
+  background: #b91c2e;
+  transform: translateY(-2px);
+}
+
+.secondaryCta {
+  padding: 16px 36px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.secondaryCta:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.04);
+}

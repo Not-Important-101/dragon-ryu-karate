@@ -1,0 +1,101 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: #0a0a0a;
+  color: #f5f5f5;
+  font-family: var(--font-body), 'Barlow', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+select,
+textarea {
+  font-family: var(--font-body), 'Barlow', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.font-display {
+  font-family: var(--font-display), 'Bebas Neue', sans-serif;
+}
+
+/* ── Keyframes ── */
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+@keyframes float1 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(3deg); }
+}
+@keyframes goldGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(201,168,76,0.08), inset 0 0 0 1px rgba(201,168,76,0.3); }
+  50% { box-shadow: 0 0 30px rgba(201,168,76,0.18), inset 0 0 0 1px rgba(201,168,76,0.5); }
+}
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(215,38,56,0.5); }
+  70% { box-shadow: 0 0 0 14px rgba(215,38,56,0); }
+}
+
+/* ── Scroll reveal (see components/AnimateIn.tsx) ── */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-stagger-item] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease var(--stagger-delay, 0ms), transform 0.6s ease var(--stagger-delay, 0ms);
+}
+[data-stagger-item].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive grid / nav utility classes ──
+   Mirrors the data-r breakpoint rules from the original design prototype. */
+@media (max-width: 768px) {
+  .r-dn { display: none !important; }
+  .r-hb { display: flex !important; }
+  .r-g2 { grid-template-columns: 1fr !important; }
+  .r-g3 { grid-template-columns: 1fr !important; }
+  .r-g4 { grid-template-columns: 1fr 1fr !important; }
+  .r-g5 { grid-template-columns: 1fr 1fr !important; }
+  .r-f2 { grid-template-columns: 1fr !important; }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .r-g3 { grid-template-columns: 1fr 1fr !important; }
+  .r-g5 { grid-template-columns: repeat(3, 1fr) !important; }
+}
+@media (min-width: 769px) {
+  .r-hb { display: none !important; }
+}

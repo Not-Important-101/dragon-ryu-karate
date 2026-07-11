@@ -1,0 +1,22 @@
+.goldenCard {
+  background: #111;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  overflow: hidden;
+  animation: goldGlow 4s ease-in-out infinite;
+  transition: transform 0.35s;
+}
+.goldenCard:hover {
+  transform: translateY(-6px);
+}
+
+.fighterCard {
+  background: #111;
+  border: 1px solid #1c1c1c;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+.fighterCard:hover {
+  border-color: #d72638;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}

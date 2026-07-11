@@ -1,0 +1,59 @@
+.galleryTile {
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  position: relative;
+}
+.galleryImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.galleryTile:hover .galleryImg {
+  transform: scale(1.06);
+}
+.galleryImgBW {
+  filter: grayscale(0.6) contrast(1.1);
+  transition: filter 0.6s ease, transform 0.6s ease;
+}
+.galleryTile:hover .galleryImgBW {
+  filter: grayscale(0) contrast(1);
+  transform: scale(1.06);
+}
+.galleryOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 10, 10, 0.4), transparent);
+}
+.galleryPlaceholder {
+  aspect-ratio: 3 / 2;
+  background: #111;
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.valueCard {
+  padding: clamp(28px, 3vw, 40px) clamp(24px, 2.5vw, 36px);
+  background: #111111;
+  border: 1px solid #1c1c1c;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+.valueCard:hover {
+  border-color: #333;
+  transform: translateY(-4px);
+}
+
+.statCell {
+  padding: clamp(28px, 3.5vw, 44px) 20px;
+  text-align: center;
+  border-right: 1px solid #1c1c1c;
+}
+.statCell:last-child {
+  border-right: none;
+}

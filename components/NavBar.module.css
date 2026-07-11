@@ -1,0 +1,53 @@
+.link {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.link:hover {
+  color: #f5f5f5;
+}
+
+.cta {
+  padding: 11px 24px;
+  background: #d72638;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.cta:hover {
+  background: #b91c2e;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.mobileLink {
+  font-family: var(--font-display), "Bebas Neue", sans-serif;
+  font-size: 32px;
+  letter-spacing: 4px;
+  color: #f5f5f5;
+  cursor: pointer;
+}
+
+.mobileCta {
+  padding: 14px 36px;
+  background: #d72638;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  cursor: pointer;
+}

@@ -1,0 +1,16 @@
+.button {
+  padding: 16px 40px;
+  background: white;
+  color: #d72638;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.25s ease;
+}
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}

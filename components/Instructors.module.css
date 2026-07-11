@@ -1,0 +1,11 @@
+.card {
+  background: #111;
+  border: 1px solid #1c1c1c;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  position: relative;
+}
+.card:hover {
+  border-color: #333;
+  transform: translateY(-4px);
+}
